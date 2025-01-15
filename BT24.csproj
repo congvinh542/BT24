@@ -6,12 +6,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Content Remove="Pages\Components\Experience.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Pages\Components\Experience.razor" />
-  </ItemGroup>
-
 </Project>
