@@ -1,0 +1,37 @@
+﻿@page "/chang-color-car"
+@layout MainLayout
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Change color car</h1>
+    <div class="row align-items-center">
+        <!-- Car Image -->
+        <div class="col-md-6 text-center">
+            <img src="@img" alt="Car" class="w-100">
+        </div>
+        <!-- Color Buttons -->
+        <div class="col-6">
+            <button class="btn btn-danger mb-2" @onclick="() => ChangeColor(1)">Red color</button>
+            <button class="btn btn-light mb-2" @onclick="() => ChangeColor(2)">Silver color</button>
+            <button class="btn btn-dark mb-2" @onclick="() => ChangeColor(3)">Black color</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    private string img { get; set; } = "/black-car.jpg";
+    private void ChangeColor(int color)
+    {
+        switch (color)
+        {
+            case 1:
+                img = "/red-car.jpg";
+                break;
+            case 2:
+                img = "/silver-car.jpg";
+                break;
+            case 3:
+                img = "/black-car.jpg";
+                break;
+        }
+    }
+}
